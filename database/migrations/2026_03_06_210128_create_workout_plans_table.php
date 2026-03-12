@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('workout_plans', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+       Schema::create('workout_plans', function (Blueprint $table) {
+    $table->id();
+    $table->string('plan_name');
+    $table->text('description');
+    $table->integer('duration');
+    $table->timestamps();
+});
     }
 
     /**
