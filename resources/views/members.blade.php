@@ -21,17 +21,37 @@ Add Member
 <th class="p-2">Age</th>
 <th class="p-2">Phone</th>
 <th class="p-2">Membership</th>
+<th class="p-2">Actions</th>
 </tr>
 
 @foreach($members as $member)
-
 <tr class="text-center border-t">
+
 <td class="p-2">{{ $member->name }}</td>
 <td class="p-2">{{ $member->age }}</td>
 <td class="p-2">{{ $member->phone }}</td>
 <td class="p-2">{{ $member->membership_type }}</td>
-</tr>
 
+<td class="p-2">
+
+<a href="/members/{{ $member->id }}/edit"
+class="bg-yellow-400 px-3 py-1 rounded text-white">
+Edit
+</a>
+
+<form action="/members/{{ $member->id }}" method="POST" class="inline">
+@csrf
+@method('DELETE')
+
+<button class="bg-red-500 px-3 py-1 rounded text-white">
+Delete
+</button>
+
+</form>
+
+</td>
+
+</tr>
 @endforeach
 
 </table>

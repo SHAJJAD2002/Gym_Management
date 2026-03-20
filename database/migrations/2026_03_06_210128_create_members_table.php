@@ -13,8 +13,6 @@ return new class extends Migration {
     $table->integer('age');
     $table->string('phone');
     $table->string('membership_type');
-    $table->date('start_date');
-    $table->date('end_date');
     $table->timestamps();
 
         });
