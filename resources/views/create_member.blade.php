@@ -1,41 +1,57 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Add Member</title>
+<title>Gym | Add Member</title>
 <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+    background: linear-gradient(135deg, #0f172a, #020617);
+}
+</style>
+
 </head>
 
-<body class="bg-gray-100 p-10">
+<body class="text-white flex items-center justify-center min-h-screen">
 
-<h1 class="text-3xl font-bold mb-5">Add New Member</h1>
+<div class="w-full max-w-2xl bg-black/60 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-green-500">
 
-<form action="/members" method="POST" class="bg-white p-6 rounded shadow w-1/2">
+<h1 class="text-3xl font-bold mb-6 text-green-400 text-center">
+ ADD NEW MEMBER
+</h1>
+
+<form action="/members" method="POST">
 @csrf
 
-<label>Name</label>
-<input type="text" name="name" class="w-full p-2 mb-3 border rounded" required>
+<div class="grid grid-cols-2 gap-4">
 
-<label>Age</label>
-<input type="number" name="age" class="w-full p-2 mb-3 border rounded" required>
+<input type="text" name="name" placeholder="Name"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
 
-<label>Phone</label>
-<input type="text" name="phone" class="w-full p-2 mb-3 border rounded" required>
+<input type="number" name="age" placeholder="Age"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
 
-<label>Membership Type</label>
-<input type="text" name="membership_type" class="w-full p-2 mb-3 border rounded" placeholder="Monthly / Yearly" required>
+<input type="text" name="phone" placeholder="Phone"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
 
-<label>Start Date</label>
-<input type="date" name="start_date" class="w-full p-2 mb-3 border rounded" required>
+<input type="text" name="membership_type" placeholder="Membership (Monthly/Yearly)"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
 
-<label>End Date</label>
-<input type="date" name="end_date" class="w-full p-2 mb-3 border rounded" required>
+<input type="date" name="start_date"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
 
-<button class="bg-blue-500 text-white px-4 py-2 rounded">
-Save Member
+<input type="date" name="end_date"
+class="p-3 rounded bg-gray-900 border border-green-500 focus:outline-none focus:ring-2 focus:ring-green-400" required>
+
+</div>
+
+<button class="mt-6 w-full bg-green-500 hover:bg-green-600 transition duration-300 py-3 rounded font-bold text-black">
+ SAVE MEMBER
 </button>
 
 </form>
+
+</div>
 
 </body>
 </html>
