@@ -16,6 +16,9 @@ Route::get('/members/{id}/edit', [MemberController::class, 'edit'])->name('membe
 Route::put('/members/{id}', [MemberController::class, 'update'])->name('members.update');
 Route::delete('/members/{id}', [MemberController::class, 'destroy'])->name('members.destroy');
 // Trainers
-Route::get('/trainers', [TrainerController::class, 'index'])->name('trainers.index');
-Route::get('/trainers/create', [TrainerController::class, 'create'])->name('trainers.create');
-Route::post('/trainers', [TrainerController::class, 'store'])->name('trainers.store');
+Route::get('/trainers', [TrainerController::class, 'index']);
+Route::get('/trainers/create', [TrainerController::class, 'create']);
+Route::post('/trainers', [TrainerController::class, 'store']);
+Route::get('/trainers/{id}/edit', [TrainerController::class, 'edit']);
+Route::put('/trainers/{id}', [TrainerController::class, 'update']);
+Route::delete('/trainers/{id}', [TrainerController::class, 'destroy']);

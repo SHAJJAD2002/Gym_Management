@@ -16,11 +16,12 @@ Add Member
 
 <table class="w-full mt-5 bg-white shadow rounded">
 
-<tr class="bg-gray-200">
+<tr class="bg-gray-200 text-left">
 <th class="p-2">Name</th>
 <th class="p-2">Age</th>
 <th class="p-2">Phone</th>
 <th class="p-2">Membership</th>
+<th class="p-2">Trainer</th>
 <th class="p-2">Actions</th>
 </tr>
 
@@ -32,6 +33,20 @@ Add Member
 <td class="p-2">{{ $member->phone }}</td>
 <td class="p-2">{{ $member->membership_type }}</td>
 
+<!-- Trainer Column -->
+<td class="p-2">
+    @if($member->trainer)
+        <span class="bg-green-100 text-green-700 px-2 py-1 rounded">
+            {{ $member->trainer->name }}
+        </span>
+    @else
+        <span class="bg-red-100 text-red-600 px-2 py-1 rounded">
+            No Trainer
+        </span>
+    @endif
+</td>
+
+<!-- Actions -->
 <td class="p-2">
 
 <a href="/members/{{ $member->id }}/edit"

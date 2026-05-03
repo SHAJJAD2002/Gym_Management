@@ -17,7 +17,7 @@ body {
 <!-- Sidebar -->
 <div class="w-64 min-h-screen bg-black border-r border-green-500 p-5">
 
-<h1 class="text-2xl font-bold text-green-400 mb-10">💪 GYM PRO</h1>
+<h1 class="text-2xl font-bold text-green-400 mb-10">PRO FITNESS</h1>
 
 <ul class="space-y-4">
 
